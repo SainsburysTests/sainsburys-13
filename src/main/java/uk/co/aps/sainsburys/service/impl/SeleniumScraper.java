@@ -100,7 +100,7 @@ public class SeleniumScraper implements Scraper {
 
 	private String getUnitPrice(WebElement productInner) {
 		String unitPriceFromSite = productInner.findElement(By.className("pricePerUnit")).getText();
-		return unitPriceFromSite.substring(unitPriceFromSite.indexOf('£') + 1,
+		return unitPriceFromSite.substring(1,
 				unitPriceFromSite.indexOf("/unit"));
 	}
 
